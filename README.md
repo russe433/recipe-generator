@@ -1,4 +1,5 @@
-# recipe-generator
+# The Hangry Potato
+Recipes so gouda, you'll be raisin' the roof!
 
 ## User Story
 As a person who consumes food
