@@ -37,3 +37,18 @@ h1 {
 .title {
   color: #a6de08;
 }
+
+.modal {
+  background-color: #633102;
+}
+.modal h3 {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 50px;
+}
+.modal p {
+  color: #f1efba;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 30px;
+}
