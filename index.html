@@ -8,28 +8,35 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <!-- Header-->
-    <section class="Header-Title">
-      <div class="container">
-        <h1 class="title has-text-centered">The Hangry Potato 🥔</h1>
+    <section class="header">
+      <div class="card-container-title">
+        <h1 class="title-has-text-centered">The Hangry Potato 🥔</h1>
       </div>
     </section>
 
     <!-- Search Bar -->
-    <div class="field is-grouped">
-      <p class="control is-expanded">
-        <input class="input" type="text" placeholder="Find a repository" />
-      </p>
-      <p class="control">
-        <a class="button is-info"> Search </a>
-      </p>
+    <div class="search-bar">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input
+            class="input"
+            type="text"
+            placeholder="What's making you hangry?"
+          />
+        </p>
+        <p class="control">
+          <a class="button is-info"> Search </a>
+        </p>
+      </div>
     </div>
 
     <!-- Card Section -->
     <section class="section is-hidden-mobile">
-      <div class="container">
+      <div class="card-container">
         <h3 class="title has-text-centered is-size-4">Your Results</h3>
         <div class="mt-5 columns is-centered is-8 is-variable">
           <div class="column is-4-tablet is-3-desktop">
