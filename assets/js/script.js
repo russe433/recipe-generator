@@ -1,4 +1,4 @@
-var queryIngredient = "tomato"
+var queryIngredient = "chicken"
 
 
 
