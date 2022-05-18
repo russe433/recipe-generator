@@ -1,53 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Functions to open and close a modal
-  function openModal($el) {
-    $el.classList.add("is-active");
-  }
-
-  function closeModal($el) {
-    $el.classList.remove("is-active");
-  }
-
-  function closeAllModals() {
-    (document.querySelectorAll(".modal") || []).forEach(($modal) => {
-      closeModal($modal);
-    });
-  }
-
-  // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll(".js-modal-trigger") || []).forEach(($trigger) => {
-    const modal = $trigger.dataset.target;
-    const $target = document.getElementById(modal);
-
-    $trigger.addEventListener("click", () => {
-      openModal($target);
-    });
-  });
-
-  // Add a click event on various child elements to close the parent modal
-  (
-    document.querySelectorAll(
-      ".modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button"
-    ) || []
-  ).forEach(($close) => {
-    const $target = $close.closest(".modal");
-
-    $close.addEventListener("click", () => {
-      closeModal($target);
-    });
-  });
-
-  // Add a keyboard event to close all modals
-  document.addEventListener("keydown", (event) => {
-    const e = event || window.event;
-
-    if (e.keyCode === 27) {
-      // Escape key
-      closeAllModals();
-    }
-  });
-});
-
 // modal
 const modalCloseButton = document.querySelector("#close");
 const modalBg = document.querySelector(".modal-background");
@@ -60,3 +10,25 @@ modalCloseButton.addEventListener("click", () => {
 modalBg.addEventListener("click", () => {
   modal.classList.remove("is-active");
 });
+
+//API Fetches
+const searchBtn = document.getElementById("search-btn");
+const recipeList = document.getElementById("recipes");
+const recipeView = document.querySelector("recipe-view");
+const recipeCloseBtn = document.getElementById("recipe-close-btn");
+
+// Event Listeners
+searchBtn.addEventListener("click", getRecipeList);
+
+// Get recipes that match ingredient input
+function getRecipeList() {
+  let searchInputText = document.getElementById("search-input").value.trim();
+  fetch(
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputText}"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+}
+// Meal DB URL: www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
