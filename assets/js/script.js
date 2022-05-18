@@ -1,37 +1,34 @@
-var queryIngredient = "chicken"
+// modal
+const modalCloseButton = document.querySelector("#close");
+const modalBg = document.querySelector(".modal-background");
+const modal = document.querySelector(".modal");
 
+modalCloseButton.addEventListener("click", () => {
+  modalCloseButton.classList.add("is-active");
+});
 
+modalBg.addEventListener("click", () => {
+  modal.classList.remove("is-active");
+});
 
+//API Fetches
+const searchBtn = document.getElementById("search-btn");
+const recipeList = document.getElementById("recipes");
+const recipeView = document.querySelector("recipe-view");
+const recipeCloseBtn = document.getElementById("recipe-close-btn");
 
+// Event Listeners
+searchBtn.addEventListener("click", getRecipeList);
 
-function getIngredients(query) {
-    // Replace `octocat` with anyone else's GitHub username
-    var requestUrl = 'https://api.edamam.com/api/food-database/v2/parser?app_id=a7e34d30&app_key=%202b1b11a09e2d52c041b4c2fbde20f9cf&ingr='+query+'&nutrition-type=cooking';
-  
-    fetch(requestUrl)
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(data) {
-        console.log(data)
-      });
-  }
-  
-function getRecipe(query) {
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
-            'X-RapidAPI-Key': '2a2039aab0msh3bb2be665843e7ep1d574bjsnf678438cb873'
-        }
-    };
-    
-    fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q='+query, options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+// Get recipes that match ingredient input
+function getRecipeList() {
+  let searchInputText = document.getElementById("search-input").value.trim();
+  fetch(
+    "https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputText}"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    });
 }
-getRecipe(queryIngredient);
-
-
-  //getIngredients(queryIngredient);
+// Meal DB URL: www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
