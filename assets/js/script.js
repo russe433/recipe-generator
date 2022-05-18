@@ -16,7 +16,10 @@ const searchBtn = document.getElementById("search-btn");
 const recipeList = document.getElementById("recipes");
 const recipeView = document.querySelector("recipe-view");
 const recipeCloseBtn = document.getElementById("recipe-close-btn");
+ HEAD
 var queryIngredient = "#search-btn";
+
+
 // Event Listeners
 searchBtn.addEventListener("click", getRecipeList);
 

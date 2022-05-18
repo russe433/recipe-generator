@@ -8,93 +8,107 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- Header-->
-    <section class="Header-Title">
-      <div class="container">
-        <h1 class="title has-text-centered">The Hangry Potato 🥔</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="card-container-title">
+        <h1 class="title-has-text-centered is-size-1">The Hangry Potato 🥔</h1>
+      </div>
+      <div class="slogan">
+        <h2 class="title-has-text-centered is-size-2">
+          Recipes so gouda, you'll be raisin the roof!
+        </h2>
       </div>
     </section>
 
     <!-- Search Bar -->
-    <div class="field is-grouped">
-      <p class="control is-expanded">
-        <input class="input" type="text" placeholder="Find a repository" />
-      </p>
-      <p class="control">
-        <a class="button is-info"> Search </a>
-      </p>
+    <div class="search-bar is-centered">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input
+            type="text"
+            class="input"
+            id="search-input"
+            placeholder="What's making you hangry?"
+          />
+        </p>
+        <p class="search-btn" id="search-btn">
+          <button class="button is-info" type="submit"> Search </button>
+        </p>
+      </div>
+    </div>
+    <!-- Recipe Results -->
+    <div class="recipe-results">
+      <h3 class="title has-text-centered is-size-3">Your Recipes:</h3>
+
+      <!-- Card Section -->
+        <div class="recipe-card" id="recipes">
+          <div class="mt-5 columns is-centered is-8 is-variable">
+            <div class="column is-4-tablet is-3-desktop">
+              <div class="card">
+                <div class="card-image has-text-centered px-6">
+                  <img
+                    src="assets/images/potatoes.jpg"
+                    alt="Placeholder image"
+                  />
+                </div>
+                <div class="card-content">
+                  <p class="time">10 Minutes</p>
+                  <p class="title is-size-5">Potato Soup</p>
+                </div>
+                <button class="card-footer">
+                  <p class="recipe-view" id="view">
+                    <a href="" class="has-text-grey">View</a>
+                  </p>
+                </button>
+              </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Card Section -->
-    <section class="section is-hidden-mobile">
-      <div class="container">
-        <h3 class="title has-text-centered is-size-4">Your Results</h3>
-        <div class="mt-5 columns is-centered is-8 is-variable">
-          <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
-              <div class="card-image has-text-centered px-6">
-                <img src="assets/images/potatoes.jpg" alt="Placeholder image" />
-              </div>
-              <div class="card-content">
-                <p>20 Minutes</p>
-                <p class="title is-size-5">Potato Soup</p>
-              </div>
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <a href="" class="has-text-grey">View</a>
-                </p>
-              </footer>
+    <div class = "meal-details">
+        <!-- recipe close btn -->
+        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+          <i class = "fas fa-times"></i>
+        </button>
+
+        <!-- Recipe Details -->
+        <div class = "recipe-content">
+          <h2 class = "recipe-title">Meal Name</h2>
+            <p class = "recipe-category">Category</p>
+            <div class = "recipe-instruct">
+              <h3>Instructions:</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
             </div>
-          </div>
-          <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
-              <div class="card-image has-text-centered px-6">
-                <img src="assets/images/potatoes.jpg" alt="Placeholder image" />
-              </div>
-              <div class="card-content">
-                <p>20 Minutes</p>
-                <p class="title is-size-5">Potato Bread</p>
-              </div>
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <a href="" class="has-text-grey">View</a>
-                </p>
-              </footer>
+            <div class = "recipe-meal-img">
+            <img src = "food.jpg" alt = "">
             </div>
-          </div>
-          <div class="column is-4-tablet is-3-desktop">
-            <div class="card">
-              <div class="card-image has-text-centered px-6">
-                <img src="assets/images/potatoes.jpg" alt="Placeholder image" />
-              </div>
-              <div class="card-content">
-                <p>20 Minutes</p>
-                <p class="title is-size-5">Potato Chips</p>
-              </div>
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <a href="" class="has-text-grey">View</a>
-                </p>
-              </footer>
-            </div>
+            <div class = "recipe-link">
+            <a href = "#" target = "_blank">Watch Video</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
     <!-- Modal -->
-
-    <div class="modal">
+    <div class="modal is-active">
       <div class="modal-background"></div>
-      <div class="modal-content">
-        <p class="image is-4by3">
-          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+      <div class="modal-content" width="300px" height="200px">
+        <h3 class="title mb-6 is-centered">Hey...</h3>
+        <p class="is-centered">
+          Only the hangriest of potatoes are allowed beyond this point.
         </p>
       </div>
-      <button class="modal-close is-large" aria-label="close"></button>
+      <button
+        class="modal-close is-large"
+        id="close"
+        aria-label="close"
+      ></button>
     </div>
-    <script src="./assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

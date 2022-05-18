@@ -1,0 +1,90 @@
+/* Hero Section */
+body {
+  background-color: #ffff;
+}
+
+h1 {
+  text-align: center;
+  color: #a6de08;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Search Bar */
+.slogan {
+  text-align: center;
+  color: #f1efba;
+}
+
+.search-bar {
+  padding: 100px;
+  margin: 50px, 0, 50px, 0;
+}
+
+.input {
+  background-color: #633102;
+  border: none;
+  border-radius: 20px;
+  color: #a6de08;
+}
+
+.input p {
+  color: #a6de08;
+}
+
+.search-btn .button {
+  border-radius: 20px;
+  background-color: #a6de08;
+  color: #633102;
+}
+.button :hover {
+  color: #a6de08;
+  background-color: #633102;
+}
+
+/* Results Header */
+.title {
+  color: #a6de08;
+}
+
+/* Recipe Cards */
+.card-content {
+  background-color: #a6de08;
+  padding: 0px;
+  margin: 0, auto;
+}
+
+.time {
+  color: #f1efba;
+}
+.card-content p {
+  text-align: center;
+  background-color: #633102;
+}
+
+/* Modal */
+
+.modal {
+  background-color: #633102;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(0, 0, 0.2);
+}
+
+.modal-content {
+  background-color: #633102;
+  max-width: 600px;
+  padding-bottom: 50px;
+}
+
+.modal h3 {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 50px;
+}
+.modal p {
+  color: #f1efba;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 30px;
+}
