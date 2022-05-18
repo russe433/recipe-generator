@@ -1,8 +1,8 @@
-* {
-  background-color: #ab7f56;
+/* Hero Section */
+body {
+  background-color: #ffff;
 }
 
-/* Hero Section */
 h1 {
   text-align: center;
   color: #a6de08;
@@ -32,7 +32,7 @@ h1 {
   color: #a6de08;
 }
 
-.control .button {
+.search-btn .button {
   border-radius: 20px;
   background-color: #a6de08;
   color: #633102;
@@ -54,14 +54,27 @@ h1 {
   margin: 0, auto;
 }
 
+.time {
+  color: #f1efba;
+}
+.card-content p {
+  text-align: center;
+  background-color: #633102;
+}
+
 /* Modal */
 
 .modal {
   background-color: #633102;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(0, 0, 0.2);
 }
 
 .modal-content {
   background-color: #633102;
+  max-width: 600px;
+  padding-bottom: 50px;
 }
 
 .modal h3 {
